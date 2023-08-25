@@ -1,5 +1,5 @@
 
-import { NextApiRequest,NextApiResponse } from "next";
+
 import bcrypt from 'bcrypt';
 import { NextResponse } from "next/server";
 import db from '@/lib/db';

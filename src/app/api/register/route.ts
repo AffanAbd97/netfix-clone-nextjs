@@ -17,8 +17,10 @@ export  async function POST(req:Request) {
          
             
         if (existEmail) {
+            console.log('email already taken');
+            
             return NextResponse.json({
-                error:'email already taken'
+                message:'email already taken'
             },{status:422})
         }
         const hashedPassword = await bcrypt.hash(password,12)

@@ -7,6 +7,7 @@ import { authOptions } from "../api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
 import LogoutButton from "../components/logout";
 import Navbar from "../components/navbar";
+import Billboard from "../components/billboard";
 
 
 
@@ -26,7 +27,7 @@ export default  async function Home() {
   return (
   <>
   <Navbar/>
-  
+  <Billboard/>
  </>
   )
 }

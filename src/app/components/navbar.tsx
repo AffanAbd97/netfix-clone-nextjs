@@ -95,10 +95,10 @@ useEffect(() => {
         "
         >
           <div className="text-gray-200 hover:text-gray-300 cursor-pointer transition">
-            <BsSearch clasName="" />
+            <BsSearch />
           </div>
           <div className="text-gray-200 hover:text-gray-300 cursor-pointer transition">
-            <BsBell clasName="" />
+            <BsBell />
           </div>
           <div onClick={toggleAccountMenu} className="flex flex-row gap-2 items-center cursor-pointer relative">
             <div className="w-6 h-6 lg:w-10 lg:h-10 rounded-md overflow-hidden">

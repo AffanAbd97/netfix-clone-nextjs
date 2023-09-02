@@ -8,6 +8,7 @@ import { redirect } from "next/navigation";
 import LogoutButton from "../components/logout";
 import Navbar from "../components/navbar";
 import Billboard from "../components/billboard";
+import MovieList from "../components/movieList";
 
 
 
@@ -28,6 +29,9 @@ export default  async function Home() {
   <>
   <Navbar/>
   <Billboard/>
+  <div className="pb-40">
+    <MovieList title="Trending Now"/>
+  </div>
  </>
   )
 }

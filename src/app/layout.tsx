@@ -1,6 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
-
+import { NextAuthProvider } from "./providers";
 
 export const metadata: Metadata = {
   title: 'Netflix Clone',
@@ -14,7 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body >{children}</body>
+    <body>
+    <NextAuthProvider>{children}</NextAuthProvider>
+    </body>
     </html>
   )
 }

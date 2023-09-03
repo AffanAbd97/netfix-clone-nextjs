@@ -5,13 +5,17 @@ import React from "react";
 import MovieCard from "./movieCard";
 
 interface MovieListProps {
-  
+  data: Record<string, any>[]
   title: string;
 }
+export enum Type {
+  Favorites,
+  Movies ,
+ 
+}
+const MovieList: React.FC<MovieListProps> = ({ title ,data}) => {
 
-const MovieList: React.FC<MovieListProps> = ({ title }) => {
-    const {data:movie} = useMovies()
-    const data = movie as Record<string, any>[];
+ 
   if (isEmpty(data)) {
     return null;
   }

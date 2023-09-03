@@ -8,7 +8,10 @@ import { redirect } from "next/navigation";
 import LogoutButton from "../components/logout";
 import Navbar from "../components/navbar";
 import Billboard from "../components/billboard";
-import MovieList from "../components/movieList";
+import MovieList, { Type } from "../components/movieList";
+import IndexMovie from "../components/indexMovie";
+import useInfoModalStore from "@/hooks/useInfoModal";
+import InfoModal from "../components/infoModal";
 
 
 
@@ -20,6 +23,7 @@ export default  async function Home() {
    redirect('/auth')
   }
 
+
   
 
 
@@ -27,11 +31,11 @@ export default  async function Home() {
 
   return (
   <>
+  
+    <InfoModal  />
   <Navbar/>
   <Billboard/>
-  <div className="pb-40">
-    <MovieList title="Trending Now"/>
-  </div>
+ <IndexMovie/>
  </>
   )
 }
